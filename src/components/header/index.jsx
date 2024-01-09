@@ -9,7 +9,7 @@ import Cart from "../cart/index";
 import * as Styles from "./styles";
 
 
-import {loginUser, logoutUser} from '../../redux/user/actions'
+import {userLogin, userLogout} from '../../redux/user/slice'
 import { selectProductsCount } from "../../redux/cart/cart.selectors";
 
 function Header() {
@@ -31,11 +31,11 @@ function Header() {
   };
 
   const handleLoginClick = () => {
-    dispatch(loginUser({name:"nmbmbb",email:"fgdgdgd"}));
+    dispatch(userLogin({name:"nmbmbb",email:"fgdgdgd"}));
   };
 
   const handleLogoutClick = () => {
-    dispatch(logoutUser());
+    dispatch(userLogout());
   }
 
   return (
